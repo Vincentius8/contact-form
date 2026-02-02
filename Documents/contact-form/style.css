@@ -1,4 +1,3 @@
-/* ===== DESIGN TOKENS ===== */
 :root {
   --bg: #f8fafc;
   --card: #ffffff;
@@ -10,7 +9,6 @@
   --focus-ring: rgba(37, 99, 235, 0.18);
 }
 
-/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,7 +21,6 @@ body {
   color: var(--text-main);
 }
 
-/* ===== PAGE LAYOUT ===== */
 .page {
   min-height: 100vh;
   display: grid;
@@ -31,7 +28,6 @@ body {
   padding: 24px;
 }
 
-/* ===== FORM CARD ===== */
 .form-card {
   width: 100%;
   max-width: 460px;
@@ -43,7 +39,6 @@ body {
     0 2px 6px rgba(15, 23, 42, 0.04);
 }
 
-/* ===== HEADER ===== */
 .form-header {
   margin-bottom: 28px;
 }
@@ -59,7 +54,6 @@ body {
   color: var(--text-muted);
 }
 
-/* ===== FORM GROUP ===== */
 .form-group {
   margin-bottom: 20px;
 }
@@ -72,7 +66,6 @@ label {
   color: var(--text-main);
 }
 
-/* ===== INPUTS ===== */
 input[type="text"],
 input[type="email"],
 select,
@@ -92,7 +85,6 @@ textarea {
   font-family: inherit;
 }
 
-/* ===== FOCUS STATE ===== */
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
@@ -102,7 +94,6 @@ textarea:focus {
   box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
-/* ===== RADIO & CHECKBOX ===== */
 .inline-group {
   display: flex;
   gap: 18px;
@@ -132,7 +123,6 @@ input[type="checkbox"]:focus {
   outline-offset: 2px;
 }
 
-/* ===== BUTTON ===== */
 button {
   width: 100%;
   margin-top: 12px;
