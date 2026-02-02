@@ -1,0 +1,162 @@
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --focus-ring: rgba(37, 99, 235, 0.18);
+}
+
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+/* ===== PAGE LAYOUT ===== */
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* ===== FORM CARD ===== */
+.form-card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--card);
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+/* ===== HEADER ===== */
+.form-header {
+  margin-bottom: 28px;
+}
+
+.form-header h1 {
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.form-header p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ===== INPUTS ===== */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* ===== FOCUS STATE ===== */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+/* ===== RADIO & CHECKBOX ===== */
+.inline-group {
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.inline-group label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+  width: auto;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--focus-ring);
+}
